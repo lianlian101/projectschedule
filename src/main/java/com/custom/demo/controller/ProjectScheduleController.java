@@ -24,7 +24,7 @@ public class ProjectScheduleController {
     /**
      * 日期：2020年1月2日
      * 作者：zhb
-     * 说明：获取所有计划
+     * 说明：查询所有计划
      * 
      * @param page
      * @param rows
@@ -64,6 +64,14 @@ public class ProjectScheduleController {
         return RM.fail();
     }
     
+    /**
+     * 日期：2020年1月3日
+     * 作者：zhb
+     * 说明：查询计划
+     * 
+     * @param id
+     * @return
+     */
     @RequestMapping("selectOne")
     @ResponseBody
     public RM selectOne(int id){
@@ -76,6 +84,14 @@ public class ProjectScheduleController {
         return RM.fail();
     }
     
+    /**
+     * 日期：2020年1月3日
+     * 作者：zhb
+     * 说明：添加计划
+     * 
+     * @param projectSchedule
+     * @return
+     */
     @RequestMapping("add")
     @ResponseBody
     public RM add(ProjectSchedule projectSchedule){
@@ -93,6 +109,14 @@ public class ProjectScheduleController {
         return RM.fail();
     }
     
+    /**
+     * 日期：2020年1月3日
+     * 作者：zhb
+     * 说明：删除计划
+     * 
+     * @param ids
+     * @return
+     */
     @RequestMapping("del")
     @ResponseBody
     public RM del(@RequestParam("ids[]")int[] ids){
